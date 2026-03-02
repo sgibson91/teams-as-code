@@ -11,7 +11,7 @@ teams.schema.yaml @the-turing-way/infrastructure-working-group
 # against the teams.yaml file.
 teams/accessibility-working-group.yaml        @the-turing-way/accessibility-working-group
 teams/all-all-contributors.yaml               @the-turing-way/all-all-contributors
-teams/book-dash-planning-committee.yaml       @the-turing-way/book-dash-planning-committee
+teams/book-dash-planning-committee.yaml       @the-turing-way/book-dash-working-group
 teams/book-dash-working-group.yaml            @the-turing-way/book-dash-working-group
 teams/community-management-working-group.yaml @the-turing-way/community-management-working-group
 teams/gardeners.yaml                          @the-turing-way/gardeners
