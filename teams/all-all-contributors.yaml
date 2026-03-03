@@ -9,5 +9,5 @@ members:
 permissions:
   - repo: all-all-contributors
     role: maintain
-  # - repo: teams-as-code
-  #   role: push
+  - repo: teams-as-code
+    role: push

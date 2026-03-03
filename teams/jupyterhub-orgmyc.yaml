@@ -11,5 +11,5 @@ members:
 permissions:
   - repo: jupyterhub-orgmyc-EOSS
     role: admin
-  # - repo: teams-as-code
-  #   role: push
+  - repo: teams-as-code
+    role: push

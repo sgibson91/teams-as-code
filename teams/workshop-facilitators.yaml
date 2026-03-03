@@ -8,5 +8,5 @@ members:
 permissions:
   - repo: workshops
     role: push
-  # - repo: teams-as-code
-  #   role: push
+  - repo: teams-as-code
+    role: push

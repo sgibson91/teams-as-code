@@ -10,5 +10,5 @@ members:
 permissions:
   - repo: Build-a-Jupyter-Book-with-The-Turing-Way
     role: maintain
-  # - repo: teams-as-code
-  #   role: push
+  - repo: teams-as-code
+    role: push

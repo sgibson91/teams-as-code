@@ -1,0 +1,16 @@
+# "Super teams" that can approve any change
+* @the-turing-way/steering-committee @the-turing-way/infrastructure-working-group
+
+# These teams will be requested to review any Pull Request made against their teams.yaml file
+teams/accessibility-working-group.yaml        @the-turing-way/accessibility-working-group
+teams/all-all-contributors.yaml               @the-turing-way/all-all-contributors
+teams/book-dash-planning-committee.yaml       @the-turing-way/book-dash-working-group
+teams/book-dash-working-group.yaml            @the-turing-way/book-dash-working-group
+teams/community-management-working-group.yaml @the-turing-way/community-management-working-group
+teams/gardeners.yaml                          @the-turing-way/gardeners
+teams/infrastructure-working-group.yaml       @the-turing-way/infrastructure-working-group
+teams/jupyter-book-workshop.yaml              @the-turing-way/jupyter-book-workshop
+teams/jupyterhub-orgmyc.yaml                  @the-turing-way/jupyterhub-orgmyc
+teams/steering-committee.yaml                 @the-turing-way/steering-committee
+teams/translation.yaml                        @the-turing-way/translation
+teams/workshop-facilitators.yaml              @the-turing-way/workshop-facilitators
