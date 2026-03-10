@@ -10,7 +10,7 @@ teams/community-management-working-group.yaml @the-turing-way/community-manageme
 teams/gardeners.yaml                          @the-turing-way/gardeners
 teams/infrastructure-working-group.yaml       @the-turing-way/infrastructure-working-group
 teams/jupyter-book-workshop.yaml              @the-turing-way/jupyter-book-workshop
-teams/jupyterhub-orgmyc.yaml                  @the-turing-way/jupyterhub-orgmyc
+teams/jupyterhub-orgmyc.yaml                  @the-turing-way/steering-committee
 teams/steering-committee.yaml                 @the-turing-way/steering-committee
 teams/translation.yaml                        @the-turing-way/translation
 teams/workshop-facilitators.yaml              @the-turing-way/workshop-facilitators
