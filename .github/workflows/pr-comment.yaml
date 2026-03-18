@@ -17,16 +17,17 @@ jobs:
     steps:
       - name: Post comment
         uses: peter-evans/create-or-update-comment@v5
-        issue-number: ${{ github.event.number }}
-        body: >-
-          Oh no! It seems you've opened this Pull Request from a fork :frowning_face:
-          
-          So you know, the tests will likely fail because they require secrets,
-          which aren't available when workflows run from forks. Please reopen your
-          Pull Request from a branch of this repository.
+        with:
+          issue-number: ${{ github.event.number }}
+          body: >-
+            Oh no! It seems you've opened this Pull Request from a fork :frowning_face:
+            
+            So you know, the tests will likely fail because they require secrets,
+            which aren't available when workflows run from forks. Please reopen your
+            Pull Request from a branch of this repository.
 
-          If you don't have write access to this repository, because you aren't
-          yet a member of a team, please ask someone from the team you are trying
-          to update to open the Pull Request on your behalf.
+            If you don't have write access to this repository, because you aren't
+            yet a member of a team, please ask someone from the team you are trying
+            to update to open the Pull Request on your behalf.
 
-          Thank you for keeping our teams up-to-date!
+            Thank you for keeping our teams up-to-date!
