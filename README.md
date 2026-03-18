@@ -1,14 +1,11 @@
 # teams-as-code
 
-Declaratively managing GitHub Team membership and permissions of *The Turing Way*
-community.
+Declaratively managing GitHub Team membership and permissions of *The Turing Way* community.
 
-## Adding a new team
+## Repository and file layout
 
-Adding a new file to the [`teams`](./teams) folder named `<new-team>.yaml` will
-create a new team once the Pull Request adding the file has been merged. You can
-also define the members of the team and the permissions it has on given repos
-within the file. The format looks like this:
+Each GitHub Team in _The Turing Way_ GitHub organisation has its own YAML file in the [`teams`](./teams) folder named `<team-name>.yaml`.
+The YAML files follow this format:
 
 ```yaml
 name: new-team
@@ -33,20 +30,35 @@ permissions:
 > [!WARNING]
 > Note the following requirements:
 >
-> - `name` MUST include only lowercase letters, numbers, or hyphens. For example,
->   `my-new-team` will succeed, but `My New Téam` will not.
+> - `name` MUST include only lowercase letters, numbers, or hyphens. For example, `my-new-team` will succeed, but `My New Téam` will not.
 > - GitHub Teams can be [nested](https://docs.github.com/en/organizations/organizing-members-into-teams/about-teams#nested-teams).
->   If you wish your team to be the child of another, provide the name of that
->   team here. It MUST include only lowercase letters, numbers, or hyphens.
+>   If you wish your team to be the child of another, provide the name of that team here.
+>   It MUST include only lowercase letters, numbers, or hyphens.
 > - If defining `privacy`, it MUST take a value from `closed` or `secret`.
-> - `role` MUST take a value from: `pull` (equivalent to `read`), `triage`,
->   `push` (equivalent to `write`), `maintain`, or `admin`.
+> - `role` MUST take a value from: `pull` (equivalent to `read`), `triage`, `push` (equivalent to `write`), `maintain`, or `admin`.
 
-Once you have made your edits, open a Pull Request and the workflows will trigger
-to validate them and run a plan of the changes.
+Editing any of these files, or adding a new file in this folder, will trigger a CI workflow to monitor the changes.
+Open a Pull Request and the workflows will trigger to validate them and run a plan of the changes.
 *The changes will only be applied after the Pull Request is merged.*
 
-### Self-managing your team
+## Team members
+
+- **Adding**: To add a new team member to a team, add their GitHub handle to the `members` list in the appropriate team YAML file
+- **Removing**: To remove a team member, remove them from the `members` list
+
+## Repos and permissions
+
+- **Adding**: To give a team access to a repo, add an entry to the `permissions` list in the appropriate team YAML file, with the name of the repo and the level of access to grant
+- **Removing**: To remove a team's access to a repo, remove the repo from the `permissions` list
+
+## Teams
+
+- **Create a new team**: To create a new team, add a new file under the [`teams`](./teams) folder named `<team-name>.yaml`, following the [format describe above](#repository-and-file-layout).
+  When you open a Pull Request, a CI workflow will check the validity of the file.
+  The new team will be created when your Pull Request is merged.
+- **Deleting a team**: To delete a team, simply remove the file from the `teams` folder
+
+## Self-managing your team
 
 There are two pieces to include that will allow your team to self-manage through
 this repository.
@@ -68,18 +80,11 @@ teams/<your-team>.yaml @the-turing-way/<your-team>
 ```
 
 > [!WARNING]
-> Note that your team's name will have been changed to lower case, whitespace
-> swapped for hyphens, and any special characters replaced.
+> Note that your team's name will have been changed to lower case, whitespace swapped for hyphens, and any special characters replaced.
 > For example: 'My Téam' will become `my-team`.
 
-Open a Pull Request with these changes. Once merged, this will request your team
-to review future Pull Requests against your team's file and allow that team's
-members to merge themselves, providing that tests pass.
-
-## Deleting a team
-
-Deleting a team is as simple as removing the file from the [`teams`](./teams)
-folder and opening/merging a Pull Request.
+Open a Pull Request with these changes.
+Once merged, this will request your team to review future Pull Requests against your team's file and allow that team's members to merge themselves, providing that tests pass.
 
 ## How does this repo work? (More detail.)
 
