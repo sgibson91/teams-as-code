@@ -43,20 +43,35 @@ Open a Pull Request and the workflows will trigger to validate them and run a pl
 
 ## Team members
 
-- **Adding**: To add a new team member to a team, add their GitHub handle to the `members` list in the appropriate team YAML file
-- **Removing**: To remove a team member, remove them from the `members` list
+### Adding
+
+To add a new team member to a team, add their GitHub handle to the `members` list in the appropriate team YAML file.
+
+### Removing
+
+To remove a team member, remove them from the `members` list.
 
 ## Repos and permissions
 
-- **Adding**: To give a team access to a repo, add an entry to the `permissions` list in the appropriate team YAML file, with the name of the repo and the level of access to grant
-- **Removing**: To remove a team's access to a repo, remove the repo from the `permissions` list
+### Adding
+
+To give a team access to a repo, add an entry to the `permissions` list in the appropriate team YAML file, with the name of the repo and the level of access to grant
+
+### Removing
+
+To remove a team's access to a repo, remove the repo from the `permissions` list
 
 ## Teams
 
-- **Create a new team**: To create a new team, add a new file under the [`teams`](./teams) folder named `<team-name>.yaml`, following the [format describe above](#repository-and-file-layout).
-  When you open a Pull Request, a CI workflow will check the validity of the file.
-  The new team will be created when your Pull Request is merged.
-- **Deleting a team**: To delete a team, simply remove the file from the `teams` folder
+### Create a new team
+
+To create a new team, add a new file under the [`teams`](./teams) folder named `<team-name>.yaml`, following the [format describe above](#repository-and-file-layout).
+When you open a Pull Request, a CI workflow will check the validity of the file.
+The new team will be created when your Pull Request is merged.
+
+### Deleting a team
+
+To delete a team, simply remove the file from the `teams` folder
 
 ## Self-managing your team
 
