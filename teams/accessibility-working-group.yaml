@@ -3,6 +3,7 @@ description: The Turing Way accessibility working group
 members:
   - user: LizHareDogs
     maintainer: true
+  - user: sgibson91
 permissions:
   - repo: accessibility-working-group
     role: maintain
