@@ -21,11 +21,14 @@ concurrency:
 
 jobs:
   plan-apply:
+    runs-on: ubuntu-latest
     # Provide GITHUB_TOKEN enough permissions to post a comment to a PR
     permissions:
       issues: write
       pull-requests: write
-    runs-on: ubuntu-latest
+    # Secrets for this workflow are in an environment with extra restrictions
+    environment: tf-env
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v6
