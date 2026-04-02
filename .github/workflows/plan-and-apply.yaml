@@ -74,7 +74,7 @@ jobs:
           TF_VAR_github_token: "${{ steps.generate-token.outputs.token }}"
 
       - name: Post plan as PR comment
-        uses: borchero/terraform-plan-comment@v2
+        uses: borchero/terraform-plan-comment@v3
         with:
           expand-comment: true  # Ensures the comment is unfolded for review
           planfile: .planfile
