@@ -37,7 +37,7 @@ jobs:
           credentials_json: "${{ secrets.GCP_SA_CREDS }}"
 
       - name: Install opentofu
-        uses: opentofu/setup-opentofu@v1
+        uses: opentofu/setup-opentofu@v2
         with:
           tofu_version: ${{ env.TOFU_VERSION }}
 
