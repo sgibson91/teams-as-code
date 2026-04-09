@@ -1,16 +1,17 @@
 name: Warn about PRs from forks via comment
 
 on:
-  pull_request:
+  pull_request_target:
     branches:
       - main
     types:
       - opened
+      - reopened
 
 jobs:
   warn-forks:
     runs-on: ubuntu-latest
-    if: github.repository != 'the-turing-way/teams-as-code'
+    if: github.event.pull_request_target.head.repo.full_name != 'the-turing-way/teams-as-code'
     permissions:
       issues: write
       pull-requests: write

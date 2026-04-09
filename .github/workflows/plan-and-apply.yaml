@@ -16,16 +16,19 @@ env:
 
 concurrency:
   # Only run one tf job at a time to avoid conflicts and state lock
-  group: ${{ github.workflow }}-${{ github.ref }}
+  group: ${{ github.workflow }}
   cancel-in-progress: false
 
 jobs:
   plan-apply:
+    runs-on: ubuntu-latest
     # Provide GITHUB_TOKEN enough permissions to post a comment to a PR
     permissions:
       issues: write
       pull-requests: write
-    runs-on: ubuntu-latest
+    # Secrets for this workflow are in an environment with extra restrictions
+    environment: tf-env
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v6
